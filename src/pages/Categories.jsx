@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from '../components/Header';
 
 function Categories() {
 
@@ -23,10 +24,10 @@ function Categories() {
   }, []);
 
   return (
-
-    <main>
-      <h1>Hello Studi</h1>
-      
+    <>
+      <Header color="yellow"/>
+      <main>
+        <h1>Hello Studi</h1>
           <div>
 
             {categories.map(category => {
@@ -40,9 +41,8 @@ function Categories() {
             })}
             
           </div>
-
-
-    </main>
+      </main>
+    </>
 
   );
 }

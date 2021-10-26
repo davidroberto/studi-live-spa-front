@@ -1,10 +1,13 @@
+import Header from "../components/Header";
+
 function Home() {
-
   return (
-    <main>
-        <h1>Le super blog Studi Studi</h1>
-    </main>
-
+    <>
+      <Header color="red"/>
+      <main>
+          <h1>Le super blog Studi</h1>
+      </main>
+    </>
   );
 }
 

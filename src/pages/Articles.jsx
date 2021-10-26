@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from '../components/Header';
 
 function Home() {
 
@@ -23,25 +24,36 @@ function Home() {
   }, []);
 
   return (
-
-    <main>
-      <h1>Nos derniers articles :</h1>
-          <div>
-
-            {articles.map(article => {
-              return (
-                <article key={article.id}>
-                  <h2>{article.title}</h2>
-                  <p>{article.description}</p>
-                </article>
-                
-              );
-            })}
-            
-          </div>
+    <>
+    <Header color="blue"/>
+      <main>
+        <h1>Nos derniers articles :</h1>
+            <div>
 
 
-    </main>
+              {articles.length > 0 ?
+                <>
+                  {articles.map(article => {
+                    return (
+                      <article key={article.id}>
+                        <h2>{article.title}</h2>
+                        <p>{article.description}</p>
+                      </article>
+                      
+                    );
+                  })}
+                </>
+              :
+                <p>Loading</p>
+              }
+              
+
+
+              
+            </div>
+
+      </main>
+    </>
 
   );
 }
